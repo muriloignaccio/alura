@@ -1,0 +1,26 @@
+<canvas height="400" width="600"></canvas>
+<script>
+    let tela = document.querySelector("canvas");
+    let pincel = tela.getContext("2d");
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0, 0, 600, 400);
+    function criarCirculo(event){
+        let x = event.pageX - tela.offsetLeft;
+        let y = event.pageY - tela.offsetTop;
+        pincel.fillStyle = cores[click];
+        pincel.beginPath();
+        pincel.arc(x, y, 5, 0, 2 * 3.1416);
+        pincel.fill();
+    }
+    function mudarCor(){
+        click++
+        if(click >= cores.length){
+            click = 0;
+        }
+        return false;
+    }
+    let click = 0;
+    let cores = ["blue", "red", "green"];
+    tela.onclick = criarCirculo;
+    tela.oncontextmenu = mudarCor;
+</script>

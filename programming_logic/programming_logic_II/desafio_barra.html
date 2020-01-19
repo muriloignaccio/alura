@@ -1,0 +1,38 @@
+<canvas height="400" width="600"></canvas>
+<script>
+let tela = document.querySelector("canvas");
+let pincel = tela.getContext("2d");
+
+function gerarRetangulo(x, y, largura, altura, cor){
+    pincel.fillStyle = cor;
+    pincel.fillRect(x, y, largura, altura);
+    pincel.strokeRect(x, y, largura, altura);
+}
+function gerarTexto(texto, x, y){
+    pincel.font = "15px Georgia"
+    pincel.fillStyle = "black";
+    pincel.fillText(texto, x, y);
+}
+function desenhaBarra(x, y, anos, cores, texto){
+    gerarTexto(texto, x, y - 10);
+    for(let i = 0; i < anos.length; i++){
+        gerarRetangulo(x, y, 50, anos[i], cores[i])
+        console.log(y);
+        y += anos[i]
+    }
+}
+function gerarLegendas(listaTexto, x, y, listaCores){
+    for(let i = 0; i < listaTexto.length; i++){
+        gerarTexto(listaTexto[i], x, y);
+        gerarRetangulo(x-15, y - 10, 10, 10, listaCores[i]);
+        x += 80;
+    }
+}
+let cores = ["blue", "green", "yellow", "red"];
+let serie2015 = [50, 25, 20, 5];
+let serie2016 = [65, 20, 13, 2];
+let navegadores = ["Chrome", "Firefox", "Safari", "Outros"];
+desenhaBarra(50, 50, serie2015, cores, "2015");
+desenhaBarra(150, 50, serie2016, cores, '2016');
+gerarLegendas(navegadores, 50, 180, cores);
+</script>

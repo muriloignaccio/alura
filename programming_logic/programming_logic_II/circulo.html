@@ -1,0 +1,30 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+    
+    //setting background
+    pincel.fillStyle = 'lightgray';
+    pincel.fillRect(0, 0, 600, 400);
+    
+    //creating function to draw a circus
+    function desenhaCirculo(x, y, raio, cor) {
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2*3.14);
+        pincel.fill();
+    }
+
+    //optimizing code to draw flowers using desenhaCirculo function based on the coordinates
+    function desenhaFlor(x, y){
+        desenhaCirculo(x, y, 25, 'red');
+        desenhaCirculo(x, y-50, 25, 'yellow');
+        desenhaCirculo(x, y + 50, 25, 'blue');
+        desenhaCirculo(x + 50, y, 25, 'black');
+        desenhaCirculo(x - 50, y, 25, 'orange');
+    }
+
+    //calling the function to draw a flower in x = 300 and y = 200
+    desenhaFlor(300, 200);
+</script>
