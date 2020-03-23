@@ -1,0 +1,154 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+header {
+  background-color: #BBBBBB;
+  padding: 20px 0;
+}
+
+.caixa {
+  position: relative;
+  margin: 0 auto;
+  width: 940px;
+}
+
+nav {
+  position: absolute;
+  top: 110px;
+  right: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+nav a {
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* list-style: none; */
+}
+
+nav a:hover {
+  color: #C78C19;
+  text-decoration: underline;
+}
+
+.produtos {
+  margin: 0 auto;
+  padding: 50px 0;
+  width: 940px;
+}
+
+.produtos li {
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0 1.5%;
+  padding: 30px 20px;
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+}
+
+.produtos li:hover {
+  border-color: #C78C19;
+}
+
+.produtos li:hover h2 {
+  font-size: 34px;
+}
+
+.produtos li:active {
+  border-color: #088C19;
+}
+
+.produtos h2 {
+  font-size: 30px;
+  font-size: bold;
+}
+
+.produto-descricao {
+  font-size: 18px;
+}
+
+.produto-preco {
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+footer {
+  background: url("../images/bg.jpg");
+  padding: 40px 0;
+  text-align: center;
+}
+
+.copyright {
+  color: #FFF;
+  font-size: 13px;
+  margin: 20px 0 0;
+}
+
+main {
+  margin: 0 auto;
+  width: 940px;
+}
+
+main form {
+  margin: 40px 0;
+}
+
+form label, form legend {
+  display: block;
+  margin: 0 0 10px;
+}
+
+.input-padrao {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.submit {
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 0;
+  transition: 1s all;
+  width: 40%;
+}
+
+.submit:hover {
+  background-color: darkorange;
+  transform: scale(1.2);
+}
+
+table {
+  margin: 20px 0 40px;
+}
+
+thead {
+  background-color: #555555;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 8px 15px;
+}
